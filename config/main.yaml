@@ -1,0 +1,35 @@
+defaults:
+  - model: model1
+  - _self_
+
+raw: 
+  path: data/raw/churn.csv
+
+processed:
+
+  path: data/processed/processed.csv
+
+final:
+  dir: data/final
+  X_train: 
+    name: X_train.csv
+    path: ${final.dir}/${final.X_train.name}
+  X_test:
+    name: X_test.csv
+    path: ${final.dir}/${final.X_test.name}
+  y_train: 
+    name: y_train.csv
+    path: ${final.dir}/${final.y_train.name}
+  y_test:
+    name: y_test.csv
+    path: ${final.dir}/${final.y_test.name}
+
+model:
+  dir: models
+  name: churn_model.pkl
+  path: ${model.dir}/${model.name}
+
+#mlflow_tracking_ui: file:C:\Users\HP 1O3O G2\telecom_customer_churn_prediction\mlruns\
+mlflow_tracking_ui: https://dagshub.com/joe88data/telecom_customer_churn_prediction.mlflow
+mlflow_USERNAME: joe88data
+mlflow_PASSWORD: e94114ca328c75772401898d749decb6dbcbeb21

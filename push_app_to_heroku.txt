@@ -1,0 +1,33 @@
+# adjust column names
+How to push API to heroku
+
+1. git init ----to initialize an empty git repository
+
+2. create .gitignore and ignore some files
+
+3. git add .   -----to add all files to the git repository
+
+4. commit
+
+5. heroku login
+
+6. create heroku.yml and add content as follow:
+build:
+ docker:
+  web:Dockerfile
+
+7. git add heroku.yml
+
+8. git commit
+
+9. heroku create telecom-churn-prediction-app
+
+10. git add:remote telecom-churn-prediction-app
+
+11. heroku stack: set container
+
+12. git branch -M main
+
+13. git push heroku main
+
+if successful, API is live. copy url, go to postman and send request to the API
