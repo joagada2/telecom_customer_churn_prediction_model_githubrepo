@@ -7,7 +7,7 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-model = joblib.load('containerized_app/app/churn_model.pkl')
+model = joblib.load('churn_model.pkl')
 
 
 def create_type_instance(type_name: str):
