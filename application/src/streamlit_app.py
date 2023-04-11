@@ -145,7 +145,7 @@ def write_predictions(data: dict):
         data_json = json.dumps(data)
 
         prediction = requests.post(
-            "https://customer-predict-1.herokuapp.com/predict",
+            "https://telecom-churn-prediction.herokuapp.com/",
             headers={"content-type": "application/json"},
             data=data_json,
         ).text[0]
